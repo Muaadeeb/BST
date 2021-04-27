@@ -79,6 +79,20 @@ using BlazorServer.Shared;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 13 "C:\Users\Owner\source\repos\BST\BuySellTrade\BlazorServer\_Imports.razor"
+using DataLibrary.Db.Models;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 14 "C:\Users\Owner\source\repos\BST\BuySellTrade\BlazorServer\_Imports.razor"
+using DataLibrary.Data.Interfaces;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/counter")]
     public partial class Counter : Microsoft.AspNetCore.Components.ComponentBase
     {

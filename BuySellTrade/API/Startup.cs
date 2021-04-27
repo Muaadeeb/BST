@@ -1,3 +1,6 @@
+using DataLibrary.Data;
+using DataLibrary.Data.Interfaces;
+using DataLibrary.Db;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -26,6 +29,15 @@ namespace API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddSingleton(new ConnectionStringData
+            {
+                SqlConnectionName = "Default"
+            });
+
+            services.AddSingleton<IDataAccess, SqlDb>();
+            services.AddSingleton<ICustomerData, CustomerData>();
+            services.AddSingleton<IOrderData, OrderData>();
+            services.AddSingleton<IFoodData, FoodData>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
